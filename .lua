@@ -1,8 +1,8 @@
 getgenv().Config = {
     CameraLock = {
         Toggled = false,
-        Smoothness = 0.1,
-        DefaultPrediction = 0.15,
+        Smoothness = 0.135,
+        DefaultPrediction = 0.9,
         AutoPrediction = true,
         TargetPart = "HumanoidRootPart"
     },
@@ -41,6 +41,12 @@ FOVCircle.Color = getgenv().Config.FOV.Color
 FOVCircle.Thickness = getgenv().Config.FOV.Thickness
 FOVCircle.Filled = getgenv().Config.FOV.Filled
 FOVCircle.Position = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+
+local hue = 0
+RunService.RenderStepped:Connect(function(dt)
+    hue = (hue + dt * 0.2) % 1
+    FOVCircle.Color = Color3.fromHSV(hue, 0.8, 0.8)
+end)
 
 --// Notification Function
 local function Notify(title, text)

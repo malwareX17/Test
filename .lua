@@ -9,7 +9,7 @@ getgenv().Config = {
     FOV = {
         Visible = true,
         Radius = 150,
-        Thickness = 20,
+        Thickness = 5,
         Filled = false
     },
     Settings = {

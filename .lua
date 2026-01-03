@@ -9,7 +9,7 @@ getgenv().Config = {
     FOV = {
         Visible = true,
         Radius = 150,
-        Thickness = 15,
+        Thickness = 100,
         Filled = false
     },
     Settings = {
@@ -156,7 +156,7 @@ RunService.RenderStepped:Connect(function(dt)
             -- Target died or left, stop locking
             CurrentTarget = nil
             getgenv().Config.CameraLock.Toggled = false
-            Notify("Target Lost", "Target is no longer valid")
+            Notify("Untargeted", "Target is no longer valid")
         end
     end
 end)
@@ -167,4 +167,4 @@ UIS.InputBegan:Connect(function(input, processed)
     end
 end)
 
-Notify("ProjectBanana", "Ready for Lock-on")
+Notify("ProjectBanana", "Inizialized")

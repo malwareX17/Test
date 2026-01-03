@@ -9,7 +9,7 @@ getgenv().Config = {
     FOV = {
         Visible = true,
         Radius = 150,
-        Thickness = 1,
+        Thickness = 15,
         Filled = false
     },
     Settings = {
@@ -62,8 +62,8 @@ local ui = Instance.new("UICorner", button)
 
 button.Size = UDim2.new(0, 200, 0, 50)
 button.Position = UDim2.new(0, 10, 0, 10)
-button.Font = Enum.Font.GothamBlack
-button.TextScaled = true
+button.Font = Enum.Font.Arcade
+button.TextSize = 16
 button.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 button.Active = true
 button.Draggable = true

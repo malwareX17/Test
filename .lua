@@ -1,27 +1,3 @@
-getgenv().Config = {
-    CameraLock = {
-        Toggled = false,
-        Smoothness = 0.9,
-        DefaultPrediction = 0.135,
-        AutoPrediction = true,
-        TargetPart = "HumanoidRootPart"
-    },
-    FOV = {
-        Visible = true,
-        Radius = 150,
-        Thickness = 5,
-        Filled = false
-    },
-    Settings = {
-        Keybind = Enum.KeyCode.Q
-    },
-    PredictionTable = {
-        [30] = 0.12, [40] = 0.125, [50] = 0.13, [60] = 0.135, [70] = 0.14,
-        [80] = 0.145, [90] = 0.15, [100] = 0.155, [110] = 0.16, [120] = 0.165,
-        [130] = 0.17, [140] = 0.175
-    }
-}
-
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local UIS = game:GetService("UserInputService")
